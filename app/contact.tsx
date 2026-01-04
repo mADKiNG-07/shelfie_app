@@ -3,6 +3,8 @@ import React from "react";
 import { Link } from "expo-router";
 import { index_styles } from "./index";
 import { Colors } from "../constants/colors";
+import ThemedText from "../components/ThemedText";
+import Spacer from "../components/Spacer";
 
 const Contact = () => {
   const colorScheme = useColorScheme();
@@ -12,13 +14,14 @@ const Contact = () => {
     <View
       style={[index_styles.container, { backgroundColor: theme.background }]}
     >
-      <Text style={[index_styles.title, { color: theme.title }]}>Contact</Text>
-      <Text style={[index_styles.title, { color: theme.title }]}>
-        This is the contact page of the app.
-      </Text>
+      <ThemedText style={[index_styles.boldTitle]}>Contact</ThemedText>
+      <Spacer height={10} />
+      <ThemedText>This is the contact page of the app.</ThemedText>
 
-      <Link href="/" style={[index_styles.link, { color: theme.text }]}>
-        {`<-`} Return
+      <Spacer height={20} />
+
+      <Link href="/" style={[index_styles.link]}>
+        <ThemedText>Return</ThemedText>
       </Link>
     </View>
   );

@@ -21,12 +21,7 @@ To run this project:
 pnpm install
 
 # Start the development server
-pnpm start
-
-# Run on specific platform
-pnpm ios      # iOS simulator
-pnpm android  # Android emulator
-pnpm web      # Web browser
+npx expo start
 ```
 
 ## Tutorial Source

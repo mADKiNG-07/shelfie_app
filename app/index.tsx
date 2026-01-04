@@ -3,6 +3,10 @@ import Logo from "../assets/img/logo_dark.png";
 import React from "react";
 import { Link } from "expo-router";
 import { Colors } from "../constants/colors";
+import ThemedLogo from "../components/ThemedLogo";
+import ThemedText from "../components/ThemedText";
+import Spacer from "../components/Spacer";
+import ThemedCard from "../components/ThemedCard";
 
 const Home = () => {
   const colorScheme = useColorScheme();
@@ -12,21 +16,31 @@ const Home = () => {
     <View
       style={[index_styles.container, { backgroundColor: theme.background }]}
     >
-      <Image source={Logo} style={index_styles.image} />
-      <Text style={{ color: theme.title }}>The Number 1</Text>
-      <Text style={{ marginTop: 10, marginBottom: 30, color: theme.title }}>
-        Reading List App
-      </Text>
+      <ThemedLogo />
+      <Spacer height={20} />
 
-      <View style={index_styles.card}>
-        <Text style={[index_styles.title]}>Hello, this is not a card</Text>
-      </View>
+      <ThemedText style={index_styles.boldTitle} title={true}>
+        The Number 1
+      </ThemedText>
 
-      <Link href="/about" style={[index_styles.link, { color: theme.text }]}>
-        About Page
+      <Spacer height={10} />
+      <ThemedText>Reading List App</ThemedText>
+      <Spacer height={20} />
+
+      <ThemedCard>
+        <ThemedText title={true} style={index_styles.boldTitle}>
+          Hello, this is not a card
+        </ThemedText>
+      </ThemedCard>
+
+      <Spacer height={20} />
+
+      <Link href="/about" style={[index_styles.link]}>
+        <ThemedText>About Page</ThemedText>
       </Link>
-      <Link href="/contact" style={[index_styles.link, { color: theme.text }]}>
-        Contact Page
+      <Spacer height={10} />
+      <Link href="/contact" style={[index_styles.link]}>
+        <ThemedText>Contact Page</ThemedText>
       </Link>
     </View>
   );
@@ -41,27 +55,14 @@ export const index_styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  title: {
+  boldTitle: {
     fontSize: 20,
     fontWeight: "bold",
   },
 
-  image: {
-    marginVertical: 20,
-    width: 100,
-    height: 100,
-  },
-
-  card: {
-    backgroundColor: "#f8f8f8",
-    padding: 20,
-    borderRadius: 10,
-    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-  },
-
   link: {
-    marginTop: 30,
     padding: 3,
     borderBottomWidth: 1,
+    borderBottomColor: Colors.primary,
   },
 });
