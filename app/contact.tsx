@@ -1,10 +1,10 @@
 import { StyleSheet, Text, useColorScheme, View } from "react-native";
 import React from "react";
-import { index_styles } from "./index";
 import { Link } from "expo-router";
+import { index_styles } from "./index";
 import { Colors } from "../constants/colors";
 
-const About = () => {
+const Contact = () => {
   const colorScheme = useColorScheme();
   const theme = Colors[colorScheme!] ?? Colors.light;
 
@@ -12,15 +12,18 @@ const About = () => {
     <View
       style={[index_styles.container, { backgroundColor: theme.background }]}
     >
+      <Text style={[index_styles.title, { color: theme.title }]}>Contact</Text>
       <Text style={[index_styles.title, { color: theme.title }]}>
-        About Page
+        This is the contact page of the app.
       </Text>
 
       <Link href="/" style={[index_styles.link, { color: theme.text }]}>
-        Home Page
+        {`<-`} Return
       </Link>
     </View>
   );
 };
 
-export default About;
+export default Contact;
+
+const styles = StyleSheet.create({});
