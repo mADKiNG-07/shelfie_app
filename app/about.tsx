@@ -1,4 +1,4 @@
-import { StyleSheet, Text, useColorScheme, View } from "react-native";
+import { useColorScheme, View } from "react-native";
 import React from "react";
 import { index_styles } from "./index";
 import { Link } from "expo-router";

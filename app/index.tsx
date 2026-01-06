@@ -1,5 +1,4 @@
-import { StyleSheet, Text, View, Image, useColorScheme } from "react-native";
-import Logo from "../assets/img/logo_dark.png";
+import { StyleSheet, View, useColorScheme } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
 import { Colors } from "../constants/colors";

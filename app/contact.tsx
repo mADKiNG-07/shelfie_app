@@ -1,4 +1,4 @@
-import { StyleSheet, Text, useColorScheme, View } from "react-native";
+import { useColorScheme, View } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
 import { index_styles } from "./index";
@@ -28,5 +28,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-const styles = StyleSheet.create({});
