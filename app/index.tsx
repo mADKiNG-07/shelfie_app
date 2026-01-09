@@ -34,8 +34,8 @@ const Home = () => {
 
       <Spacer height={20} />
 
-      <Link href="/about" style={[index_styles.link]}>
-        <ThemedText>About Page</ThemedText>
+      <Link href="/login" style={[index_styles.link]}>
+        <ThemedText>Login</ThemedText>
       </Link>
       <Spacer height={10} />
       <Link href="/contact" style={[index_styles.link]}>

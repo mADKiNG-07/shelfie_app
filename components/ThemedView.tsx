@@ -9,16 +9,20 @@ import { Colors } from "../constants/colors";
 
 const ThemedView = ({
   style,
+  children,
   ...props
 }: {
   style: StyleProp<ViewStyle>;
-  props: ViewProps;
+  props?: ViewProps;
+  children: React.ReactNode;
 }) => {
   const colorScheme = useColorScheme();
   const theme = Colors[colorScheme!] ?? Colors.light;
 
   return (
-    <View style={[{ backgroundColor: theme.background }, style]} {...props} />
+    <View style={[{ backgroundColor: theme.background }, style]} {...props}>
+      {children}
+    </View>
   );
 };
 
